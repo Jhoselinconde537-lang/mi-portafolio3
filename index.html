@@ -8,9 +8,9 @@
 </head>
 <body>
     <script src="script.js"></script>
-   <!-- ENCABEZADO -->
+    <!-- ENCABEZADO -->
     <header class="encabezado">
-        <h2 class="logo">Nombre del sitio</h2>
+        <h2 class="logo">TU ESTILO TU AUTO</h2>
 
         <nav class="menu">
             <a href="#">Página</a>
@@ -29,7 +29,7 @@
         </p>
         <button class="boton">Botón</button>
 
-        <img class="img-grande" src="img.jpg" alt="auto" />
+        <img class="img-grande" src="img/img.jpg" alt="auto" />
     </section>
 
     <!-- SECCIÓN DE TARJETAS -->
@@ -38,19 +38,19 @@
 
         <div class="tarjetas">
             <div class="tarjeta">
-                <img src="img2.jpg" />
+                <img src="img/img2.jpg" />
                 <h4>Subtítulo</h4>
                 <p>Cuerpo del texto para lo que desees ampliar adicionalmente al subtítulo.</p>
             </div>
 
             <div class="tarjeta">
-                <img src="https://i.imgur.com/6xi7SNI.jpeg" />
+                <img src="img/img6.jpg" />
                 <h4>Subtítulo</h4>
                 <p>Cuerpo del texto para lo que desees ampliar sobre el tema principal.</p>
             </div>
 
             <div class="tarjeta">
-                <img src="https://i.imgur.com/hLHDGgA.jpeg" />
+                <img src="img/img4.jpg" />
                 <h4>Subtítulo</h4>
                 <p>Cuerpo del texto para lo que desees compartir adicionalmente.</p>
             </div>
@@ -73,12 +73,16 @@
                 <button class="boton-etiqueta">Ecología y ahorro</button>
             </div>
 
-            <button class="boton negro">Buscar</button>
-            <button class="boton gris">Volver a seleccionar</button>
+            <!-- BOTONES CORREGIDOS -->
+            <button class="boton negro" id="btnBuscar">Buscar</button>
+            <button class="boton gris" id="btnReset">Volver a seleccionar</button>
+
+            <!-- MENSAJE DE ERROR (NO afecta diseño) -->
+            <p id="mensajeError" style="color:red; display:none;">Debes seleccionar al menos una opción.</p>
         </div>
 
         <div class="col">
-            <img class="img-grande" src="https://i.imgur.com/8OlnK5J.jpeg" alt="auto lujo" />
+            <img class="img-grande" src="img/img2.jpg" alt="auto lujo" />
         </div>
 
     </section>
@@ -89,13 +93,13 @@
 
         <div class="tarjetas">
             <div class="tarjeta">
-                <img src="https://i.imgur.com/0zLojRx.jpeg" />
+                <img src="img/img.jpg" height="220" width="100"/>
                 <h4>HÍBRIDO</h4>
                 <p>Cuerpo del texto para lo que desees ampliar sobre el tema principal.</p>
             </div>
 
             <div class="tarjeta">
-                <img src="https://i.imgur.com/6Co8jXY.jpeg" />
+                <img src="img/img4.jpg" height="220" width="100"/>
                 <h4>Subtítulo</h4>
                 <p>Cuerpo del texto para lo que desees ampliar sobre el tema principal.</p>
             </div>

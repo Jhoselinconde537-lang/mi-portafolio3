@@ -1,16 +1,32 @@
-// Seleccionar todas las etiquetas (botones redondos)
-const botones = document.querySelectorAll(".boton-etiqueta");
+// ------- Seleccionar etiquetas -------
+const etiquetas = document.querySelectorAll(".boton-etiqueta");
 
-// Agregar evento de clic a cada botón
-botones.forEach(boton => {
-    boton.addEventListener("click", () => {
-        boton.classList.toggle("seleccionado");
+etiquetas.forEach(etiqueta => {
+    etiqueta.addEventListener("click", () => {
+        etiqueta.classList.toggle("seleccionado");
     });
 });
 
-// Botón "Volver a seleccionar"
-const botonReset = document.querySelector(".gris");
+// ------- Botón de RESET -------
+const botonReset = document.getElementById("btnReset");
 
 botonReset.addEventListener("click", () => {
-    botones.forEach(boton => boton.classList.remove("seleccionado"));
+    etiquetas.forEach(etiqueta => etiqueta.classList.remove("seleccionado"));
+});
+
+// ------- Botón BUSCAR -------
+const botonBuscar = document.getElementById("btnBuscar");
+const mensajeError = document.getElementById("mensajeError");
+
+botonBuscar.addEventListener("click", () => {
+    const seleccionadas = document.querySelectorAll(".boton-etiqueta.seleccionado");
+
+    if (seleccionadas.length === 0) {
+        mensajeError.style.display = "block";
+        setTimeout(() => mensajeError.style.display = "none", 2000);
+        return;
+    }
+
+    // SI selecciona → ir a la segunda página
+    window.location.href = "segunda_pagina.html";
 });
