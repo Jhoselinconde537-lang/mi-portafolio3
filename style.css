@@ -1,147 +1,130 @@
-/* ---------- ESTILOS GENERALES ---------- */
-body {
+:root{
+    --pink:#e84393;
+}
+*{
+    
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-}
-
-h1, h2, h4, p {
-    margin: 0;
-}
-
-/* ---------- ENCABEZADO ---------- */
-.encabezado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.menu a {
-    margin-right: 15px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
     text-decoration: none;
-    color: #000;
+    text-transform:  .2s linear;
 }
 
-.menu .boton {
-    background-color: #000;
-    color: #fff;
-    padding: 8px 18px;
-    border-radius: 5px;
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top:hidder;
+    overflow: hidden;
 }
 
-/* ---------- HERO ---------- */
-.hero {
+header{
+    position: fixed;
+    top: 0;  left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
-.hero .img-grande {
-    width: 400px;
-    border-radius: 15px;
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
 }
 
-/* ---------- BOTONES GENERALES ---------- */
-.boton {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
+header .logo span{
+    color: var(--pink);
+}
+
+header.parte-sup a{
+    font-size: 2rem;
+    padding: 0  1,5rem;
+    color: #666;
+}
+
+header .parte-sup a:hover{
+    color: var(--pink);
+}
+headerm .iconos a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left:1.5rem;
+}
+header .iconos a:hover{
+    color: var(--pink);
+
+}
+
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: 5rem;
+    padding: 5rem 1.5rem;
     cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
+
 }
 
-.boton.negro { background-color: #000; color: #fff; }
-.boton.gris { background-color: #ccc; }
 
-/* ---------- SECCIONES ---------- */
-.seccion {
-    padding: 40px 60px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+@media (max-width:991px) {
+    html{
+    font-size: 55%;
+}
+header{
+    padding: 2rem;
+}
 }
 
-.fila {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-/* ---------- TARJETAS ---------- */
-.tarjetas {
-    display: flex;
-    gap: 20px;
-}
 
-.tarjeta {
-    width: 300px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    padding: 15px;
-}
-
-.tarjeta img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* ---------- BOTONES ETIQUETAS ---------- */
-.contenedor-botones {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.boton-etiqueta {
-    padding: 8px 16px;
-    border: 1px solid #000;
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-/* Cuando se selecciona */
-.boton-etiqueta.seleccionado {
-    background-color: #000;
-    color: #fff;
-}
-
-/* ---------- IMÁGENES GRANDES ---------- */
-.img-grande {
-    width: 400px;
-    height: auto;
-    border-radius: 15px;
-}
-
-/* ---------- TESTIMONIOS ---------- */
-.testimonios {
-    display: flex;
-    gap: 20px;
-}
-
-.testimonio {
-    background: #eee;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    font-style: italic;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 40px;
-    text-align: center;
-}
-
-footer .boton {
-    margin: 10px;
-}
-
-footer .gris {
-    background-color: #444;
-}
-
-.logo-footer {
-    margin-top: 20px;
+@media (max-width:768px){
+    header .fa-bars{
+        display: block;
+    }
+    header .parte-sup{
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        background-color: #eee;
+        border-top: 1rem solid rgba(0, 0, 0, .1);
+    }
+    header .parte-sup a{
+     padding: 1.5rem;
+     margin: 1.5rem;
+     background: #fff;
+     border: .1rem solid rgba(0, 0, 0, .1);
+     display: block;
+    }
 }
